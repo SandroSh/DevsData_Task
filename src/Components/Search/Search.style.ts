@@ -7,8 +7,8 @@ export const SearchContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
-
   input {
+    z-index:1;
     max-width: 290px;
     width:100%;
     padding: 0.875rem;

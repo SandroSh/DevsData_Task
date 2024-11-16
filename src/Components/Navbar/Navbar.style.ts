@@ -1,12 +1,6 @@
 import styled, { keyframes } from "styled-components";
-const spin = keyframes`
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-`;
+import { spin } from "../../style/animations";
+
 
 export const MainContainer = styled.div`
   width: 100%;
