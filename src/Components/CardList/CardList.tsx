@@ -19,7 +19,7 @@ const CardList = ({ data, isLoading }: { data: characterType[], isLoading: boole
                         :
                         (<LoaderContainer>
                             <img src={GalaxyIcon} alt="Galaxy icon" />
-                            <h2>Please wait, Spaceships arrive soon</h2>
+                            <h2>Please wait, Spaceships land soon</h2>
                         </LoaderContainer>
                         )
                 }

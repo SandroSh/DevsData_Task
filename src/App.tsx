@@ -1,4 +1,4 @@
-import {  useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Search from './Components/Search/Search'
@@ -10,6 +10,7 @@ import { useDebounce } from './useDebounce'
 import leftArrowIcon from './assets/leftArrow.svg'
 import rightArrowIcon from './assets/rigthArrow.svg'
 import { PaginationContainer } from './style/App.style'
+
 
 function App() {
   const [charactersData, setCharactersData] = useState<characterType[]>([]);
@@ -32,11 +33,11 @@ function App() {
       setCharactersData(data[0].results);
       setPaginationUrl({ previous: data[0].previous, next: data[0].next })
       setIsLoading(false);
+      
     } else {
       setIsLoading(true);
     }
-
-  }, [data])
+  }, [data])  
 
   useEffect(() => {
     if (debouncedValue.trim() === '') {
@@ -61,8 +62,8 @@ function App() {
       <Search handleSearch={(value: string) => handleSearch(value)} />
       <CardList isLoading={isLoading} data={charactersData} />
       <PaginationContainer>
-        {paginationUrl.previous && <img  src={leftArrowIcon} alt="left side arrow" onClick={() => setApiData({key:paginationUrl.previous, url:paginationUrl.previous})} />}
-        {paginationUrl.next && <img  src={rightArrowIcon} alt="right side arrow" onClick={() => setApiData({key:paginationUrl.next, url:paginationUrl.next})} />}
+        {paginationUrl.previous && <img src={leftArrowIcon} alt="left side arrow" onClick={() => setApiData({ key: paginationUrl.previous, url: paginationUrl.previous })} />}
+        {paginationUrl.next && <img src={rightArrowIcon} alt="right side arrow" onClick={() => setApiData({ key: paginationUrl.next, url: paginationUrl.next })} />}
       </PaginationContainer>
     </>
   )

@@ -55,6 +55,8 @@ export const Modal = ({ characterData, onClose, isOpen }: { characterData: chara
                     <Circle></Circle>
                 </CirclesContainer>
                 <InfosContainer>
+                    {/* It will be better to use map method here, but order and titles have to be 
+                    arranged differently to have 'pretty' modal. It needs more resource , so in this case I prefer to left them like that for future visual changes  */}
                     <h2>{characterData.name}</h2>
                     <Info>
                         Birth year: {characterData.birth_year}
@@ -84,7 +86,7 @@ export const Modal = ({ characterData, onClose, isOpen }: { characterData: chara
                         isDetailShown &&
                         Object.entries(details).map((item, i) => (
                             <Info key={i}>
-                                {item[0]}: {item[1].map(data => item[0] == 'films' ? data.title : data.name).join(", ") || "Not Provided"} 
+                                {item[0]}: {item[1].map(data => item[0] == 'films' ? data.title : data.name).join(", ") || "Not Provided"}
                             </Info>
                         ))
 
