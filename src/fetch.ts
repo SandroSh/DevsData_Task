@@ -1,10 +1,12 @@
-export const fetchData = async (url: string) => {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Error Fetching Data ${response.status}`);
+export const fetchData = async (urls: string[]) => {
+  // const response = await fetch(url);
+  try {
+    const response = await Promise.all(
+      urls.map((url) => fetch(url).then((res) => res.json()))
+    );
+    const data = response;
+    return data;
+  } catch (error) {
+    console.error("Data did not fetched");
   }
-
-  const data = await response.json();
-  
-  return data;
 };

@@ -13,3 +13,10 @@ export type characterType = {
     vehicles:string[];
     starships:string[];
 }
+
+export type detailsType = {
+    films:any[];
+    species:[]
+    vehicles:[];
+    starships:[];
+}

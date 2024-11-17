@@ -17,7 +17,6 @@ export const CardContainer = styled.div`
     0px 10px 21px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 23px;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
-  cursor: pointer;
   &:hover {
     transform: scale(0.98);
     background: radial-gradient(
@@ -47,6 +46,7 @@ export const ButtonContainer = styled.div`
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
+  
 `;
 
 export const ButtonText = styled.span`
@@ -79,6 +79,7 @@ export const Button = styled.button`
   align-items: center;
   background: ${colors.background};
   color: #f5f5f5;
+  
   &:hover ${IconContainer} {
     width: 145px;
   }
