@@ -1,5 +1,5 @@
 import { ModalDiv, Close, ContentContainer, Circle, CirclesContainer, InfosContainer, Info, DetailsContainer } from "./Modal.style"
-import CloseIcon from '../../assets/Close.svg'
+import CloseIcon from '../../assets/close.svg'
 import { characterType, detailsType } from "../../types";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../fetch";
