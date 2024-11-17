@@ -25,3 +25,8 @@ export type apiDataType = {
     key:string;
     url:string;
 }
+
+export type paginationUrlType = {
+    previous:string;
+    next:string;
+};

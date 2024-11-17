@@ -15,7 +15,7 @@ const CardList = ({ data, isLoading }: { data: characterType[], isLoading: boole
             <CardsContainer>
                 {
                     !isLoading && data ?
-                        data.map((character, index) => (<Card character={character} id={index} key={index} toggleModal={() => setIsModalOpen(!isModalOpen)} setCharacter={(character:characterType) => setActiveCharacter(character) } />))
+                        data.map((character, index) => (<Card character={character}  key={index} toggleModal={() => setIsModalOpen(!isModalOpen)} setCharacter={(character:characterType) => setActiveCharacter(character) } />))
                         :
                         (<LoaderContainer>
                             <img src={GalaxyIcon} alt="Galaxy icon" />

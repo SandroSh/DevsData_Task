@@ -6,7 +6,7 @@ export const CardsContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap:wrap;
-  
+  min-height:430px;
   h2 {
     color: white;
     z-index:10;
@@ -18,7 +18,6 @@ export const LoaderContainer = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  margin-top:100px;
   img {
     animation: ${spin} 5s linear infinite;
     z-index:10;

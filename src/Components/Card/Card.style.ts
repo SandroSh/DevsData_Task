@@ -34,7 +34,7 @@ export const CardContainer = styled.div`
 
 export const CardHeader = styled.div`
   text-align: center;
-  margin-top:10px;
+  margin-top:20px;
   span{
     font-size:22px;
     color:${colors.background} !important;
