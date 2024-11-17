@@ -31,6 +31,11 @@ export const ContentContainer = styled.div`
   height: 85%;
   background-color: white;
   border-radius: 3%;
+  @media (max-width: 1000px) {
+    width: 80%;
+    height: 75%;
+    
+  }
 `;
 export const CirclesContainer = styled.div`
   display: flex;
@@ -75,7 +80,7 @@ export const Info = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  margin-top: 38px;
+  margin-top: 35px;
   display: flex;
   justify-content: center;
   button {

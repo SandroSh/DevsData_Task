@@ -20,3 +20,8 @@ export type detailsType = {
     vehicles:[];
     starships:[];
 }
+
+export type apiDataType = {
+    key:string;
+    url:string;
+}
